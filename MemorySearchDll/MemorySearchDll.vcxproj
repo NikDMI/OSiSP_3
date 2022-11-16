@@ -153,6 +153,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="MemoryScanner\MemoryScanner.cpp" />
+    <ClCompile Include="MemorySearcher.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MemoryScanner\MemoryScanner.h" />
+    <ClInclude Include="MemorySearcher.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

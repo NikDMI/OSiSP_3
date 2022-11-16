@@ -13,10 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\MemoryScanner">
+      <UniqueIdentifier>{55565d61-a256-42fc-9ddc-43d7c93f0f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\MemoryScanner">
+      <UniqueIdentifier>{3af57339-a66f-478c-8b12-4e4bbfd98042}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="MemorySearcher.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryScanner\MemoryScanner.cpp">
+      <Filter>Исходные файлы\MemoryScanner</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MemorySearcher.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryScanner\MemoryScanner.h">
+      <Filter>Файлы заголовков\MemoryScanner</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
