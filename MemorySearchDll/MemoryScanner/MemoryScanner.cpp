@@ -54,7 +54,7 @@ namespace LAB {
 
 	void MemoryScanner::ExchangeProcessStrings(const std::string& targetString, const std::string& currentString) {
 		//Resume all active threads or create image of virtual memory??
-		SuspendBackgroundThreads();
+		//SuspendBackgroundThreads();
 		PageIterator pageIterator{this};
 		PageInfo pageInfo;
 		while (true) {
@@ -66,7 +66,7 @@ namespace LAB {
 					targetString, currentString);
 			}
 		}
-		ResumeBackgroundThreads();
+		//ResumeBackgroundThreads();
 	}
 
 
@@ -124,8 +124,10 @@ namespace LAB {
 
 	void MemoryScanner::ResumeBackgroundThreads() {
 		for (auto thread : m_suspendedThreads) {
-			ResumeThread(thread);
-			CloseHandle(thread);
+			if (thread != NULL) {
+				ResumeThread(thread);
+				CloseHandle(thread);
+			}
 		}
 	}
 
