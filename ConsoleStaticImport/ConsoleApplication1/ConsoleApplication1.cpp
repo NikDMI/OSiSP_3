@@ -14,7 +14,6 @@ int main()
     cout << "Before: \n" << testString1 << endl << testString2 <<endl;
     try {
         ExchangeMemoryStrings("world", "Earth");
-        ExchangeMemoryStrings("a", "_");
     }
     catch (...) {
 

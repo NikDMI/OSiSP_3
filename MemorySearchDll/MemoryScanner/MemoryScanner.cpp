@@ -14,6 +14,7 @@ namespace LAB {
 		LPVOID minAppAddr;
 	};
 
+
 	HardwareInformation::HardwareInformation() {
 		SYSTEM_INFO systemInfo;
 		GetSystemInfo(&systemInfo);
@@ -54,7 +55,7 @@ namespace LAB {
 
 	void MemoryScanner::ExchangeProcessStrings(const std::string& targetString, const std::string& currentString) {
 		//Resume all active threads or create image of virtual memory??
-		//SuspendBackgroundThreads();
+		SuspendBackgroundThreads();
 		PageIterator pageIterator{this};
 		PageInfo pageInfo;
 		while (true) {
@@ -66,7 +67,7 @@ namespace LAB {
 					targetString, currentString);
 			}
 		}
-		//ResumeBackgroundThreads();
+		ResumeBackgroundThreads();
 	}
 
 

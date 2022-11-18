@@ -1,5 +1,8 @@
 ﻿// dllmain.cpp : Определяет точку входа для приложения DLL.
+#define DLL_LIB_PROJECT
 #include <Windows.h>
+#include "MemoryScanner/MemoryScanner.h"
+
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,

@@ -8,6 +8,7 @@ using fptrExcangeString = void (*)(const char* patternString, const char* exchan
 
 using namespace std;
 
+
 int main()
 {
     HMODULE loadedDll = LoadLibrary(L"../../MemorySearchDll/Debug/MemorySearchDll.dll");
@@ -17,7 +18,7 @@ int main()
     cout << "Before: \n" << testString1 << endl << testString2 << endl;
     try {
         loadedFunction("world", "Earth");
-        //loadedFunction("a", "_");
+        cout << "\nAfter: \n" << testString1 << endl << testString2;
     }
     catch (...) {
 
