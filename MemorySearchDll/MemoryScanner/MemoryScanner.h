@@ -1,6 +1,7 @@
 #pragma once
 #include <Windows.h>
 #include <string>
+#include <vector>
 
 namespace LAB {
 
@@ -18,7 +19,7 @@ namespace LAB {
 
 		struct PageInfo {
 			void* startAddress;
-			int length;
+			SIZE_T length;
 			bool isReadWrite = false;
 		};
 
@@ -31,6 +32,10 @@ namespace LAB {
 			MemoryScanner* m_innerScanner;
 		};
 
+		void SuspendBackgroundThreads();
+		void ResumeBackgroundThreads();
+
+		std::vector<HANDLE> m_suspendedThreads;
 
 		HANDLE m_hProcess;
 	};
